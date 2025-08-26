@@ -12,13 +12,13 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="bg-white shadow-lg border-b">
+    <nav className="bg-card-bg border-b border-card-border backdrop-blur-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center">
-              <div className="text-2xl font-bold text-blue-600">🌞</div>
-              <span className="ml-2 text-xl font-semibold text-gray-800">SolanaTracker</span>
+            <Link href="/" className="flex items-center group">
+              <div className="text-2xl font-bold gradient-text animate-float">🌞</div>
+              <span className="ml-3 text-xl font-bold gradient-text">SolanaTracker</span>
             </Link>
           </div>
           
@@ -27,10 +27,10 @@ export default function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   pathname === item.href
-                    ? 'bg-blue-100 text-blue-700'
-                    : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
+                    ? 'bg-primary text-white glow-primary'
+                    : 'text-text-secondary hover:text-primary hover:bg-primary/10'
                 }`}
               >
                 {item.label}
