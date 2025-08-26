@@ -17,7 +17,7 @@ const getApiHeaders = () => {
 };
 
 // Log API calls in debug mode
-const logApiCall = (endpoint: string, data?: any) => {
+const logApiCall = (endpoint: string, data?: unknown) => {
   if (DEBUG_MODE) {
     console.log(`API Call: ${endpoint}`, data);
   }
